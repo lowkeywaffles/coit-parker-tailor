@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parker Tailor | Alterations at Coit &amp; Parker, Plano</title>
+<meta name="description" content="Clothing alterations, hemming, dress fittings, mending and repair at Parker Tailor, 3304 Coit Rd, Plano, TX 75023. Serving Plano since 2007. Rated 4.7 on Google. Call (972) 599-1595.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2323303b'/%3E%3Cpath d='M14 48 32 12l18 36z' fill='%23f2efe6'/%3E%3Cpath d='M10 54h44' stroke='%23e2574c' stroke-width='4' stroke-dasharray='6 4'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#eef3f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1e2a32" media="(prefers-color-scheme: dark)">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    if (t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.classList.add("dark");
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  /* Pattern-drafting paper (blue grid) + tailor's chalk red; dark mode is the chalkboard */
+  :root {
+    color-scheme: light;
+    --bg: #eef3f6; --bg-alt: #e3eaef; --card: #fbfcfd; --ink: #1d2830; --soft: #56656f; --line: #cfdbe3;
+    --grid: rgba(70, 120, 160, .13); --grid-major: rgba(70, 120, 160, .22); --chalk: #e2574c; --chalk-text: #c2453b;
+    --mark: #2e6fa3; --btn: #23303b; --btn-h: #33434f; --btn-fg: #fbfcfd; --tint: #dde8ef;
+    --header: rgba(238, 243, 246, .9); --shadow: rgba(29, 40, 48, .16); --map: none; --paper: #fbf7ec; --paper-line: #d8c9a7;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1e2a32; --bg-alt: #223039; --card: #26343e; --ink: #eef2f0; --soft: #a9b7bd; --line: #364753;
+    --grid: rgba(240, 240, 230, .05); --grid-major: rgba(240, 240, 230, .09); --chalk: #ff8a7f; --chalk-text: #ff9c92;
+    --mark: #f2efe6; --btn: #f2efe6; --btn-h: #ffffff; --btn-fg: #1e2a32; --tint: #2d3e49;
+    --header: rgba(30, 42, 50, .88); --shadow: rgba(0, 0, 0, .5); --map: invert(.9) hue-rotate(180deg) saturate(.4); --paper: #2b3a44; --paper-line: #4c6170;
+  } }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #1e2a32; --bg-alt: #223039; --card: #26343e; --ink: #eef2f0; --soft: #a9b7bd; --line: #364753;
+    --grid: rgba(240, 240, 230, .05); --grid-major: rgba(240, 240, 230, .09); --chalk: #ff8a7f; --chalk-text: #ff9c92;
+    --mark: #f2efe6; --btn: #f2efe6; --btn-h: #ffffff; --btn-fg: #1e2a32; --tint: #2d3e49;
+    --header: rgba(30, 42, 50, .88); --shadow: rgba(0, 0, 0, .5); --map: invert(.9) hue-rotate(180deg) saturate(.4); --paper: #2b3a44; --paper-line: #4c6170;
+  }
+  /* Theme change: wiped across like a chalk stroke */
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+  ::view-transition-new(root) { animation: chalkwipe .65s cubic-bezier(.7,0,.3,1); }
+  @keyframes chalkwipe { from { clip-path: polygon(0 0, 0 0, -20% 100%, -20% 100%); } to { clip-path: polygon(0 0, 120% 0, 100% 100%, -20% 100%); } }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Karla, system-ui, sans-serif; color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased;
+    background-color: var(--bg);
+    background-image: linear-gradient(var(--grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+      linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: Gloock, Georgia, serif; font-weight: 400; line-height: 1.04; letter-spacing: -.01em; text-wrap: balance; }
+  .note { font-family: Caveat, cursive; font-weight: 700; color: var(--chalk-text); font-size: 22px; line-height: 1; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--soft); margin-bottom: 12px; }
+  .eyebrow::before { content: ""; width: 26px; border-top: 2px dashed var(--chalk); }
+
+  header { position: sticky; top: 0; z-index: 20; background: var(--header); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .nav { height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex: none; }
+  .logo .mark { width: 42px; height: 42px; border-radius: 10px; background: #23303b; display: grid; place-items: center; }
+  .logo b { display: block; font: 400 24px/1 Gloock, serif; }
+  .logo small { display: block; font-size: 11px; font-weight: 800; letter-spacing: .16em; color: var(--soft); text-transform: uppercase; margin-top: 3px; }
+  .links { display: flex; align-items: center; gap: 20px; font-size: 15px; }
+  .links > a:not(.btn) { text-decoration: none; color: var(--soft); font-weight: 700; }
+  .links > a:not(.btn):hover { color: var(--ink); }
+
+  /* Language: a tape measure; the tape pulls out to show the language */
+  .tape { position: relative; height: 40px; width: 96px; border: 0; background: none; padding: 0; cursor: pointer; flex: none; }
+  .tape .case { position: absolute; left: 0; top: 2px; width: 36px; height: 36px; border-radius: 10px; background: #e9b232; box-shadow: inset 0 -3px 0 rgba(0,0,0,.15); display: grid; place-items: center; z-index: 2; }
+  .tape .case::after { content: ""; width: 12px; height: 12px; border-radius: 50%; background: #23303b; box-shadow: 0 0 0 3px rgba(255,255,255,.35); }
+  .tape .strip { position: absolute; left: 28px; top: 13px; height: 16px; width: 64px; background: #f6d873; border-radius: 0 3px 3px 0; overflow: hidden;
+    transform-origin: left; transition: transform .5s cubic-bezier(.5,-0.3,.3,1.4);
+    background-image: repeating-linear-gradient(90deg, #23303b 0 1px, transparent 1px 6px); background-size: 100% 4px; background-repeat: no-repeat; }
+  .tape .strip b { position: absolute; right: 6px; top: 3px; font: 800 10px/1 Karla, sans-serif; color: #23303b; letter-spacing: .06em; }
+  .tape.pull .strip { animation: pull .55s cubic-bezier(.5,-0.3,.3,1.4); }
+  @keyframes pull { 0% { transform: scaleX(.2); } 100% { transform: scaleX(1); } }
+
+  /* Theme: a triangle of tailor's chalk */
+  .chalkbtn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); padding: 0; cursor: pointer; flex: none; display: grid; place-items: center; }
+  .chalkbtn svg { width: 28px; height: 28px; transition: transform .6s cubic-bezier(.5,-0.4,.3,1.5); }
+  .dark .chalkbtn svg { transform: rotate(180deg); }
+  .chalkbtn .piece { fill: var(--chalk); transition: fill .4s; }
+  .dark .chalkbtn .piece { fill: #f2efe6; }
+  .tape:focus-visible, .chalkbtn:focus-visible, .btn:focus-visible { outline: 3px solid var(--chalk); outline-offset: 3px; border-radius: 10px; }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 6px; font-weight: 800; font-size: 15px; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s, background .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-p { background: var(--btn); color: var(--btn-fg); }
+  .btn-p:hover { background: var(--btn-h); }
+  .btn-g { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+  .links .btn { padding: 10px 16px; }
+  body, header, .piece-card, .hours, details, .btn-g, .stat, .chalkbtn { transition: background-color .4s, border-color .4s, color .4s; }
+
+  /* Hero */
+  .hero { padding: 56px 0 76px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; }
+  .status { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 6px 12px; font-size: 14px; font-weight: 700; margin-bottom: 20px; }
+  .status i { width: 9px; height: 9px; border-radius: 50%; background: #9aa6ad; }
+  .status.open i { background: #22a35a; box-shadow: 0 0 0 4px rgba(34,163,90,.2); }
+  .hero h1 { font-size: clamp(50px, 6.8vw, 90px); margin-bottom: 18px; }
+  .hero h1 u { text-decoration: none; background-image: linear-gradient(transparent 0 0); border-bottom: 4px dashed var(--chalk); }
+  .lead { font-size: 18px; color: var(--soft); max-width: 500px; margin-bottom: 26px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 12px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; }
+  .stat b { display: block; font: 400 30px/1 Gloock, serif; }
+  .stat span { font-size: 13px; color: var(--soft); font-weight: 600; }
+
+  .draft { position: relative; aspect-ratio: 1; max-width: 480px; justify-self: center; width: 100%; }
+  .draft svg { width: 100%; height: 100%; overflow: visible; }
+  .draft .cut { stroke-dasharray: 8 6; animation: march 18s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -280; } }
+  .draft .anno { font-family: Caveat, cursive; font-weight: 700; fill: var(--chalk-text); font-size: 22px; }
+  @media (prefers-reduced-motion: reduce) { .draft .cut, .tape.pull .strip { animation: none; } .chalkbtn svg { transition: none; } }
+
+  section { padding: 88px 0; }
+  .alt { background-color: color-mix(in srgb, var(--bg-alt) 90%, transparent); }
+  .head { max-width: 640px; margin-bottom: 40px; }
+  .head h2 { font-size: clamp(38px, 5.2vw, 60px); margin-bottom: 12px; }
+  .head p { color: var(--soft); font-size: 17px; }
+
+  /* Services as pattern pieces on paper */
+  .pieces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .piece-card { position: relative; background: var(--paper); border: 1.5px solid var(--paper-line); border-radius: 4px; padding: 26px 24px 24px; clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%); }
+  .piece-card::after { content: ""; position: absolute; inset: 8px; border: 1.5px dashed var(--paper-line); pointer-events: none; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%); }
+  .piece-card .note { display: block; font-size: 20px; margin-bottom: 10px; }
+  .piece-card h3 { font-size: 27px; margin-bottom: 6px; }
+  .piece-card p { color: var(--soft); font-size: 15px; }
+  .piece-card .grain { position: absolute; right: 22px; bottom: 18px; width: 14px; height: 54px; opacity: .55; }
+
+  .quote { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 40px; }
+  .quote .big { font: 400 92px/1 Gloock, serif; }
+  .quote .big small { display: block; font: 700 14px/1.3 Karla, sans-serif; color: var(--soft); margin-top: 6px; }
+  .quote ul { list-style: none; display: grid; gap: 12px; }
+  .quote li { display: flex; gap: 12px; align-items: baseline; font-size: 17px; }
+  .quote li::before { content: "✕"; color: var(--chalk-text); font-weight: 800; }
+
+  .visit { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px; }
+  .hours { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 30px; display: grid; gap: 16px; align-content: start; }
+  .hours h3 { font-size: 32px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td { padding: 9px 0; border-bottom: 1px dashed var(--line); }
+  td:last-child { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  tr.today td { color: var(--chalk-text); font-weight: 800; }
+  .row { display: flex; gap: 12px; align-items: flex-start; text-decoration: none; }
+  .row .ic { width: 40px; height: 40px; border-radius: 8px; background: var(--tint); color: var(--mark); display: grid; place-items: center; flex: none; }
+  .row strong { display: block; } .row span { color: var(--soft); font-size: 14px; }
+  .map { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); min-height: 420px; background: var(--tint); }
+  .map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; filter: var(--map); }
+
+  .faq { max-width: 800px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 800; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--chalk-text); transition: transform .25s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin-top: 8px; color: var(--soft); }
+
+  .cta { background: #23303b; color: #f2efe6; border-radius: 10px; padding: 56px; display: flex; justify-content: space-between; align-items: center; gap: 24px; position: relative; overflow: hidden;
+    background-image: linear-gradient(rgba(242,239,230,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(242,239,230,.05) 1px, transparent 1px); background-size: 20px 20px; }
+  .dark .cta { background-color: #16212a; }
+  .cta h2 { font-size: clamp(38px, 5vw, 60px); }
+  .cta .note { color: #ff9c92; font-size: 26px; display: block; margin-bottom: 6px; }
+  .cta .btn { background: #e2574c; color: #fff; flex: none; }
+
+  footer { padding: 34px 0 110px; color: var(--soft); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px dashed var(--line); padding-top: 24px; }
+  .callbar { display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; gap: 10px; }
+  .callbar .btn { flex: 1; justify-content: center; box-shadow: 0 10px 30px -8px var(--shadow); }
+
+  @media (max-width: 960px) {
+    .hero-grid, .visit, .quote { grid-template-columns: 1fr; }
+    .pieces { grid-template-columns: 1fr 1fr; }
+    .links > a:not(.btn) { display: none; }
+    .cta { flex-direction: column; align-items: flex-start; padding: 40px 28px; }
+    .draft { max-width: 400px; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 62px 0; }
+    .pieces { grid-template-columns: 1fr; }
+    .links .btn { display: none; }
+    .logo small { display: none; }
+    .callbar { display: flex; }
+    .quote { padding: 28px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Parker Tailor">
+      <span class="mark"><svg width="26" height="26" viewBox="0 0 64 64"><path d="M14 48 32 12l18 36z" fill="#f2efe6"/><path d="M8 56h48" stroke="#e2574c" stroke-width="4" stroke-dasharray="6 4"/></svg></span>
+      <span><b>Parker Tailor</b><small data-i18n="logoSub">Coit &amp; Parker · Plano</small></span>
+    </a>
+    <nav class="links">
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#visit" data-i18n="navVisit">Hours</a>
+      <button type="button" class="tape" id="tape" aria-label="Cambiar a español"><span class="strip"><b id="tape-code">EN</b></span><span class="case"></span></button>
+      <button type="button" class="chalkbtn" id="chalk" aria-label="Toggle dark mode"><svg viewBox="0 0 28 28" aria-hidden="true"><path class="piece" d="M4 22 14 4l10 18z"/><path d="M6 25h16" stroke="var(--soft)" stroke-width="1.6" stroke-dasharray="3 2"/></svg></button>
+      <a class="btn btn-p" href="tel:+19725991595"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(972) 599-1595</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="status" id="status"><i></i><span id="status-text"></span></div>
+        <h1 data-i18n="heroTitle">Measured, pinned and <u>altered right.</u></h1>
+        <p class="lead" data-i18n="heroLead">Hems, fittings, dress alterations, mending and repairs at Coit &amp; Parker in Plano. A neighborhood tailor since 2007, with regulars who've trusted us for years.</p>
+        <div class="ctas">
+          <a class="btn btn-p" href="tel:+19725991595" data-i18n="ctaCall">Call the shop</a>
+          <a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&destination=3304+Coit+Rd+Plano+TX+75023" target="_blank" rel="noopener" data-i18n="ctaDir">Get directions</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>4.7★</b><span data-i18n="st1">122 Google reviews</span></div>
+          <div class="stat"><b>2007</b><span data-i18n="st2">Sewing in Plano since</span></div>
+        </div>
+      </div>
+      <div class="draft" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <!-- bodice pattern piece -->
+          <path d="M70 60 L170 50 C175 80 200 95 230 92 L240 60 L300 70 L320 150 L290 160 L300 330 L80 340 L95 160 L60 150 Z" fill="var(--paper)" stroke="var(--paper-line)" stroke-width="2"/>
+          <path class="cut" d="M70 60 L170 50 C175 80 200 95 230 92 L240 60 L300 70 L320 150 L290 160 L300 330 L80 340 L95 160 L60 150 Z" fill="none" stroke="var(--mark)" stroke-width="2"/>
+          <!-- grainline arrow -->
+          <path d="M190 140 V290 M182 152 L190 140 L198 152 M182 278 L190 290 L198 278" stroke="var(--mark)" stroke-width="2" fill="none"/>
+          <!-- darts and notches -->
+          <path d="M140 340 L150 250 L160 340 M240 336 L232 250 L222 337" stroke="var(--chalk)" stroke-width="2" fill="none"/>
+          <path d="M92 230 l-10 4 M300 230 l10 4" stroke="var(--mark)" stroke-width="3"/>
+          <!-- annotations -->
+          <text class="anno" x="10" y="40">hem +1 ½"</text>
+          <text class="anno" x="262" y="40">take in ¾"</text>
+          <text class="anno" x="300" y="370" text-anchor="middle">✓ fits</text>
+          <path d="M250 352 C270 360 280 362 290 356" stroke="var(--chalk)" stroke-width="2" fill="none"/>
+          <!-- pins -->
+          <g stroke="#7a8a95" stroke-width="2"><path d="M110 110l26 18"/><path d="M262 118l-24 22"/></g>
+          <circle cx="110" cy="110" r="5" fill="var(--chalk)"/><circle cx="262" cy="118" r="5" fill="#e9b232"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="alt">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow" data-i18n="svcEyebrow">What we do</span><h2 data-i18n="svcTitle">Every piece cut to fit you</h2><p data-i18n="svcLead">Bring in anything that's too long, too loose, too tight or torn. We'll measure, pin and make it right.</p></div>
+      <div class="pieces">
+        <div class="piece-card"><span class="note" data-i18n="n1">piece A</span><h3 data-i18n="s1t">Hemming</h3><p data-i18n="s1p">Pants, jeans, skirts and dresses taken up to exactly the right length.</p><svg class="grain" viewBox="0 0 14 54"><path d="M7 2v50M2 10l5-8 5 8M2 44l5 8 5-8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div>
+        <div class="piece-card"><span class="note" data-i18n="n2">piece B</span><h3 data-i18n="s2t">Fit adjustments</h3><p data-i18n="s2p">Taking in, letting out and reshaping so your clothes fit the way they should.</p><svg class="grain" viewBox="0 0 14 54"><path d="M7 2v50M2 10l5-8 5 8M2 44l5 8 5-8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div>
+        <div class="piece-card"><span class="note" data-i18n="n3">piece C</span><h3 data-i18n="s3t">Dress alterations</h3><p data-i18n="s3p">Everyday and special-occasion dresses, including bridesmaid dresses, fitted to you.</p><svg class="grain" viewBox="0 0 14 54"><path d="M7 2v50M2 10l5-8 5 8M2 44l5 8 5-8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div>
+        <div class="piece-card"><span class="note" data-i18n="n4">piece D</span><h3 data-i18n="s4t">Mending &amp; repair</h3><p data-i18n="s4p">Rips, split seams and worn spots repaired so you can keep wearing what you love.</p><svg class="grain" viewBox="0 0 14 54"><path d="M7 2v50M2 10l5-8 5 8M2 44l5 8 5-8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div>
+        <div class="piece-card"><span class="note" data-i18n="n5">piece E</span><h3 data-i18n="s5t">Everyday clothes</h3><p data-i18n="s5p">Shirts, jackets and jeans adjusted for daily wear, done carefully and on time.</p><svg class="grain" viewBox="0 0 14 54"><path d="M7 2v50M2 10l5-8 5 8M2 44l5 8 5-8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div>
+        <div class="piece-card"><span class="note" data-i18n="n6">piece F</span><h3 data-i18n="s6t">Big batches</h3><p data-i18n="s6p">Regulars bring us dozens of garments over the years. Bring the whole pile.</p><svg class="grain" viewBox="0 0 14 54"><path d="M7 2v50M2 10l5-8 5 8M2 44l5 8 5-8" stroke="currentColor" fill="none" stroke-width="1.5"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="eyebrow" data-i18n="whyEyebrow">Why Plano keeps coming back</span><h2 data-i18n="whyTitle">Regulars, not one-time customers</h2></div>
+      <div class="quote">
+        <div class="big">4.7<small data-i18n="qSub">average from 122 Google reviews</small></div>
+        <ul>
+          <li data-i18n="l1">Customers who've brought every alteration here for 8+ years</li>
+          <li data-i18n="l2">Dresses fixed when others weren't sure they could be</li>
+          <li data-i18n="l3">Work finished on time, sometimes ahead of schedule</li>
+          <li data-i18n="l4">A Plano neighborhood shop since 2007</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="alt">
+    <div class="wrap">
+      <div class="head"><span class="eyebrow" data-i18n="visitEyebrow">Visit the shop</span><h2 data-i18n="visitTitle">At Coit Rd &amp; Parker Rd</h2></div>
+      <div class="visit">
+        <div class="hours">
+          <h3 data-i18n="hoursTitle">Hours</h3>
+          <table><tbody id="hours"></tbody></table>
+          <a class="row" href="tel:+19725991595"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><strong>(972) 599-1595</strong><span data-i18n="callSub">Call with questions or for a quote</span></span></a>
+          <a class="row" href="https://www.google.com/maps/dir/?api=1&destination=3304+Coit+Rd+Plano+TX+75023" target="_blank" rel="noopener"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span><strong>3304 Coit Rd</strong><span>Plano, TX 75023</span></span></a>
+        </div>
+        <div class="map"><iframe id="map" title="Map" loading="lazy" src="https://maps.google.com/maps?q=3304+Coit+Rd,+Plano,+TX+75023&z=15&output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><span class="eyebrow" data-i18n="faqEyebrow">Questions</span><h2 data-i18n="faqTitle">Before your fitting</h2></div>
+      <div class="faq">
+        <details open><summary data-i18n="q1">Do I need an appointment?</summary><p data-i18n="a1">Stop by during shop hours with your clothes. For a bigger job, call ahead at (972) 599-1595.</p></details>
+        <details><summary data-i18n="q2">What should I bring to a fitting?</summary><p data-i18n="a2">Bring the shoes and undergarments you'll wear with the piece, so the length and fit come out exactly right.</p></details>
+        <details><summary data-i18n="q3">Can you alter a dress for a wedding or event?</summary><p data-i18n="a3">Yes, including bridesmaid and special-occasion dresses. Come in early so there's time for a second fitting.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta"><div><span class="note" data-i18n="ctaNote">too long? too loose?</span><h2 data-i18n="ctaTitle">Let's make it fit.</h2></div><a class="btn" href="tel:+19725991595">(972) 599-1595</a></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Parker Tailor (Coit Parker Tailor Shop) · 3304 Coit Rd, Plano, TX 75023</span><a href="tel:+19725991595">(972) 599-1595</a></div></footer>
+<div class="callbar"><a class="btn btn-p" href="tel:+19725991595" data-i18n="barCall">Call</a><a class="btn btn-g" href="https://www.google.com/maps/dir/?api=1&destination=3304+Coit+Rd+Plano+TX+75023" target="_blank" rel="noopener" data-i18n="barDir">Directions</a></div>
+
+<script>
+  const ES = {
+    title: "Parker Tailor | Arreglos de ropa en Coit y Parker, Plano",
+    desc: "Arreglos de ropa, dobladillos, ajustes de vestidos, remiendos y reparaciones en Parker Tailor, 3304 Coit Rd, Plano, TX 75023. En Plano desde 2007. Calificación de 4.7 en Google. Llama al (972) 599-1595.",
+    logoSub: "Coit y Parker · Plano", navServices: "Servicios", navVisit: "Horario",
+    heroTitle: "Medido, prendido y <u>bien arreglado.</u>",
+    heroLead: "Dobladillos, ajustes, arreglos de vestidos, remiendos y reparaciones en Coit y Parker, en Plano. Un sastre de barrio desde 2007, con clientes que confían en nosotros desde hace años.",
+    ctaCall: "Llama al taller", ctaDir: "Cómo llegar", st1: "122 reseñas en Google", st2: "Cosiendo en Plano desde",
+    svcEyebrow: "Lo que hacemos", svcTitle: "Cada prenda ajustada a ti", svcLead: "Trae lo que te quede largo, flojo, apretado o roto. Medimos, prendemos y lo dejamos bien.",
+    n1: "pieza A", n2: "pieza B", n3: "pieza C", n4: "pieza D", n5: "pieza E", n6: "pieza F",
+    s1t: "Dobladillos", s1p: "Pantalones, jeans, faldas y vestidos al largo exacto.",
+    s2t: "Ajustes", s2p: "Entallar, soltar y reformar para que tu ropa te quede como debe.",
+    s3t: "Arreglos de vestidos", s3p: "Vestidos de diario y de ocasión especial, incluidos los de dama de honor, ajustados a ti.",
+    s4t: "Remiendos y reparaciones", s4p: "Rasgaduras, costuras abiertas y partes gastadas reparadas para que sigas usando lo que te gusta.",
+    s5t: "Ropa de diario", s5p: "Camisas, chamarras y jeans ajustados para el día a día, con cuidado y a tiempo.",
+    s6t: "Muchas prendas", s6p: "Nuestros clientes frecuentes nos traen docenas de prendas con los años. Trae toda la pila.",
+    whyEyebrow: "Por qué Plano regresa", whyTitle: "Clientes de siempre, no de una sola vez", qSub: "promedio de 122 reseñas en Google",
+    l1: "Clientes que traen todos sus arreglos aquí desde hace más de 8 años", l2: "Vestidos arreglados cuando otros no estaban seguros de poder",
+    l3: "Trabajo entregado a tiempo, a veces antes de lo previsto", l4: "Un taller de barrio en Plano desde 2007",
+    visitEyebrow: "Visita el taller", visitTitle: "En Coit Rd y Parker Rd", hoursTitle: "Horario", callSub: "Llama con preguntas o para una cotización",
+    faqEyebrow: "Preguntas", faqTitle: "Antes de tu prueba",
+    q1: "¿Necesito cita?", a1: "Ven en horario del taller con tu ropa. Para trabajos grandes, llama antes al (972) 599-1595.",
+    q2: "¿Qué debo traer a la prueba?", a2: "Trae los zapatos y la ropa interior que usarás con la prenda, para que el largo y el ajuste queden exactos.",
+    q3: "¿Pueden arreglar un vestido para una boda o evento?", a3: "Sí, incluidos vestidos de dama de honor y de ocasión especial. Ven con tiempo para una segunda prueba.",
+    ctaNote: "¿muy largo? ¿muy flojo?", ctaTitle: "Hagamos que te quede.", barCall: "Llamar", barDir: "Cómo llegar"
+  };
+  const EN = { title: document.title, desc: document.querySelector('meta[name="description"]').content };
+  document.querySelectorAll("[data-i18n]").forEach(el => { EN[el.dataset.i18n] = el.innerHTML; });
+
+  const HOURS = { 0: null, 1: [10, 18.5], 2: [10, 18.5], 3: [10, 18.5], 4: [10, 18.5], 5: [10, 18.5], 6: [10, 17.5] };
+  const DAYS = { en: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], es: ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"] };
+  const T = {
+    en: { closed: "Closed", open: t => "Open now · until " + t, opens: t => "Opens today at " + t, shut: "Closed now" },
+    es: { closed: "Cerrado", open: t => "Abierto ahora · hasta las " + t, opens: t => "Abre hoy a las " + t, shut: "Cerrado ahora" }
+  };
+  const fmt = h => { const hr = Math.floor(h), m = Math.round((h - hr) * 60); return (hr % 12 || 12) + ":" + String(m).padStart(2, "0") + " " + (hr < 12 ? "AM" : "PM"); };
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Chicago" }));
+  const today = now.getDay(), hour = now.getHours() + now.getMinutes() / 60;
+  function renderHours(l) {
+    document.getElementById("hours").innerHTML = [1,2,3,4,5,6,0].map(d => { const h = HOURS[d];
+      return `<tr${d === today ? ' class="today"' : ""}><td>${DAYS[l][d]}</td><td>${h ? fmt(h[0]) + " – " + fmt(h[1]) : T[l].closed}</td></tr>`; }).join("");
+    const h = HOURS[today], open = h && hour >= h[0] && hour < h[1];
+    document.getElementById("status").classList.toggle("open", !!open);
+    document.getElementById("status-text").textContent = open ? T[l].open(fmt(h[1])) : (h && hour < h[0] ? T[l].opens(fmt(h[0])) : T[l].shut);
+  }
+
+  let lang = "en";
+  const tape = document.getElementById("tape");
+  function setLang(l) {
+    lang = l;
+    const d = l === "es" ? ES : EN;
+    document.documentElement.lang = l; document.title = d.title;
+    document.querySelector('meta[name="description"]').content = d.desc;
+    document.querySelectorAll("[data-i18n]").forEach(el => { if (d[el.dataset.i18n] !== undefined) el.innerHTML = d[el.dataset.i18n]; });
+    document.getElementById("tape-code").textContent = l.toUpperCase();
+    tape.setAttribute("aria-label", l === "es" ? "Switch to English" : "Cambiar a español");
+    document.getElementById("map").src = "https://maps.google.com/maps?q=3304+Coit+Rd,+Plano,+TX+75023&z=15&output=embed&hl=" + l;
+    renderHours(l);
+    try { localStorage.setItem("lang", l); } catch (e) {}
+  }
+  tape.addEventListener("click", () => {
+    setLang(lang === "es" ? "en" : "es");
+    tape.classList.remove("pull"); void tape.offsetWidth; tape.classList.add("pull");
+  });
+  let init = new URLSearchParams(location.search).get("lang");
+  if (init !== "en" && init !== "es") { try { init = localStorage.getItem("lang"); } catch (e) { init = null; } }
+  if (init !== "en" && init !== "es") init = (navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en";
+  setLang(init);
+
+  const root = document.documentElement, chalk = document.getElementById("chalk");
+  const sync = () => chalk.setAttribute("aria-pressed", root.classList.contains("dark"));
+  sync();
+  function apply(t) { root.setAttribute("data-theme", t); root.classList.toggle("dark", t === "dark"); sync(); try { localStorage.setItem("theme", t); } catch (e) {} }
+  chalk.addEventListener("click", () => {
+    const next = root.classList.contains("dark") ? "light" : "dark";
+    if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) return apply(next);
+    document.startViewTransition(() => apply(next));
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => { if (!root.hasAttribute("data-theme")) { root.classList.toggle("dark", e.matches); sync(); } });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
