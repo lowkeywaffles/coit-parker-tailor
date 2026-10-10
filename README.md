@@ -13,3 +13,15 @@ Demo website for the tailor at 3304 Coit Rd, Plano, TX 75023 · (972) 599-1595.
 - [ ] Price list or typical prices (hems, take-in)
 - [ ] Photos of the shop and finished work
 - [ ] Do they speak Korean/Spanish? (could add a Korean version)
+
+## Stack
+- **Next.js** (static export) + **TypeScript** + **Tailwind CSS v4**
+- **Magic UI** (Marquee, MagicCard, BorderBeam), **Motion**, **GSAP**, **Lenis** smooth scroll, **Phosphor** icons
+- Strings live in `src/content/strings.json` (English plus each translation); the page is `src/app/page.tsx`
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static site in out/
+```
+Pushing to `main` builds and deploys to GitHub Pages (`.github/workflows/pages.yml`).

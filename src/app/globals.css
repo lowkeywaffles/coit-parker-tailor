@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Parker Tailor: pattern-drafting paper (blue grid) and tailor's chalk red; dark mode is the chalkboard */
+@theme inline {
+  --color-background: var(--bg);
+  --color-border: var(--line);
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg-2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-line: var(--line);
+  --color-chalk: var(--chalk);
+  --color-chalktext: var(--chalk-text);
+  --color-mark: var(--mark);
+  --color-btn: var(--btn);
+  --color-btnfg: var(--btn-fg);
+  --color-paper: var(--paper);
+  --color-paperline: var(--paper-line);
+  --color-tape: #e9b232;
+  --font-display: var(--font-bodoni), Georgia, serif;
+  --font-sans: var(--font-karla), system-ui, sans-serif;
+  --font-hand: var(--font-caveat), cursive;
+  --ease-silk: cubic-bezier(.32, .72, 0, 1);
+  --ease-spring: cubic-bezier(.34, 1.4, .64, 1);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-100% - var(--gap))); } }
+}
+
+:root {
+  --bg: #eef3f6; --bg-2: #e3eaef; --card: #fbfcfd; --ink: #1d2830; --soft: #56656f; --line: rgba(29, 40, 48, .12);
+  --grid: rgba(70, 120, 160, .11); --grid-major: rgba(70, 120, 160, .2); --chalk: #e2574c; --chalk-text: #c2453b;
+  --mark: #2e6fa3; --btn: #23303b; --btn-fg: #fbfcfd; --paper: #fbf7ec; --paper-line: #d8c9a7;
+  --glass: rgba(238, 243, 246, .78); --hi: rgba(255, 255, 255, .9); --shadow: rgba(29, 40, 48, .16); --map: none;
+}
+.dark {
+  --bg: #1d2930; --bg-2: #223039; --card: #26343e; --ink: #eef2f0; --soft: #a9b7bd; --line: rgba(238, 242, 240, .1);
+  --grid: rgba(240, 240, 230, .045); --grid-major: rgba(240, 240, 230, .085); --chalk: #ff8a7f; --chalk-text: #ff9c92;
+  --mark: #f2efe6; --btn: #f2efe6; --btn-fg: #1e2a32; --paper: #2b3a44; --paper-line: #4a5e6b;
+  --glass: rgba(29, 41, 48, .74); --hi: rgba(255, 255, 255, .05); --shadow: rgba(0, 0, 0, .5);
+  --map: invert(.9) hue-rotate(180deg) saturate(.5);
+  color-scheme: dark;
+}
+
+@layer base {
+  html { overflow-x: clip; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; transition: background-color .5s var(--ease-silk), color .5s var(--ease-silk); }
+  p { text-wrap: pretty; }
+}
+
+body::after { content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .04; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+.glass { background: var(--glass); backdrop-filter: blur(20px) saturate(1.4); -webkit-backdrop-filter: blur(20px) saturate(1.4); }
+.bezel { padding: 6px; background: var(--bg-2); box-shadow: inset 0 0 0 1px var(--line); }
+
+/* theme change grows out of the switch that was pressed */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: grow .6s cubic-bezier(.7, 0, .3, 1); }
+@keyframes grow { from { clip-path: circle(0 at var(--rx, 100%) var(--ry, 0)); } to { clip-path: circle(var(--rr, 150vmax) at var(--rx, 100%) var(--ry, 0)); } }
+
+.rv { opacity: 0; transform: translateY(40px); filter: blur(8px); transition-property: opacity, transform, filter; transition-duration: 1s; transition-timing-function: cubic-bezier(.32, .72, 0, 1); }
+.rv.in { opacity: 1; transform: none; filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rv { opacity: 1; transform: none; filter: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (prefers-reduced-transparency: reduce) { .glass { background: var(--bg); backdrop-filter: none; } }
+
+body { background-color: var(--bg); background-image: linear-gradient(var(--grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--grid-major) 1px, transparent 1px), linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.02; letter-spacing: -.02em; text-wrap: balance; }
+h1 u { text-decoration: none; border-bottom: 4px dashed var(--chalk); font-style: italic; }
+::selection { background: #e2574c; color: #fff; }
+:focus-visible { outline: 3px solid #e2574c; outline-offset: 3px; border-radius: 8px; }
+/* theme change: wiped across like a chalk stroke */
+::view-transition-new(root) { animation: chalkwipe .7s cubic-bezier(.7, 0, .3, 1); }
+@keyframes chalkwipe { from { clip-path: polygon(0 0, 0 0, -20% 100%, -20% 100%); } to { clip-path: polygon(0 0, 120% 0, 100% 100%, -20% 100%); } }
+/* a pattern piece: paper with a clipped corner and a dashed seam allowance */
+.piece { background: var(--paper); clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%); box-shadow: inset 0 0 0 1.5px var(--paper-line); }
+.piece::after { content: ""; position: absolute; inset: 9px; border: 1.5px dashed var(--paper-line); pointer-events: none; clip-path: polygon(0 0, calc(100% - 17px) 0, 100% 17px, 100% 100%, 0 100%); }
+@keyframes march { to { stroke-dashoffset: -280; } }
+.march { stroke-dasharray: 8 6; animation: march 18s linear infinite; }
